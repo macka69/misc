@@ -1,0 +1,19 @@
+03-Jan-2025 === YAAP Android 15 Gapps Unoffical. ===
+
+Use Fimrware  OS1.0.12 or your local region fw 
+And Orange Fox recovery.
+
+Reboot to fastboot
+fastboot flash recovery_ab recovery-name.img
+fastboot reboot recovery
+
+Flash OS1.0.12 firmware or whichever region you want.  If already on this fw skip this step.
+
+1. Install rom, format data and reboot.
+Setup the rom.
+
+
+Links-
+Firmware OS1.0.12 ---> https://xmfirmwareupdater.com/firmware/marble/stable/OS1.0.12.0.UMRMIXM/
+OFox recovery --> https://sourceforge.net/projects/pos-marble/files/OFRP-2024-11-29_RECOVERY-Test-marble.img/download
+Download rom from here (https://sourceforge.net/projects/pos-marble/files/YAAP-15-HOMEMADE-marble-20250102.zip/download)
