@@ -1,0 +1,39 @@
+11/01/25 YAAP Build
+Source:  Upstreamed to android-15.0.0_r10
+Misc performance fixes
+Credits to the YAAP Devs.
+ 
+ Device tree:
+448893f73 Revert "marble: overlay: Wifi: Update targepackage to Google APEX"
+2c1b6fe65 marble: Adjust override prop key names
+86290dfd9 marble: Build libvndfwk_detect_jni.qti_vendor
+3a95a52a5 marble: rootdir: Drop audio and sensor HAL override
+c3c19ac94 marble: Switch to xiaomi AIDL MultiHal sensors service
+28ad3ed4b marble: Add input uhid group to xiaomi MultiHal sensor
+8af7ca8ab marble: Kill log spam in logcat from SensorService
+eb7c85681 marble: Add xiaomi sensors HAL to hals.conf
+386919cc3 marble: Build Xiaomi sensor module
+50bfd33a1 marble: sensors: Move to new xiaomi-touch
+794ad946a marble: Add nonui notifier
+edafd19c7 marble: Don't build sensors.xiaomi HAL and move notifiers to root subdir
+a6fb03b49 marble: sensors: Drop unused notifiers
+3d3fb1c10 marble: Directly bind raw light notifier to SensorNotifier
+443857d42 marble: Nuke ATFWD
+90540ae4f marble: Move to double tap sensor
+1f13e0820 marble: Enable single_tap sensor and set permissions for touch sensors
+
+hardware/xiaomi
+c28b042 hidl: sensors: 2.1: Add additional pick-up sensor name
+86db057 aidl: sensors: Standardize xiaomi pickup sensor
+c010a04 aidl: sensors: Avoid target name conflicts
+6bc8fee aidl: sensors: Change default applicable license to Android-Apache-2.0
+76e3564 aidl: sensors: Import 2.X sensors hal proxy
+9b4767d aidl: sensors: Import aidl sensors MultiHal
+
+Package/apps/Settings
+cc3e8f4299c Settings: Introduce new refresh rate selector page
+
+hardware/qcom-caf/sm8450/display
+10d1a1a51 gralloc: Allow devices to opt-in for YCrCb camera video encode
+ab1636bd8 hwc_display: guard Dolby Vision support
+fb5595a79 hwc_display: Support dolby vision
