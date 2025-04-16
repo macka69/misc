@@ -1,0 +1,16 @@
+16-April-2025 === The Clover Project Android 15 Gapps Unoffical. ===
+
+Clean install from Hyperos
+Use Fimrware  OS2.0.1.0 
+And Orange Fox recovery.
+
+Reboot to fastboot
+fastboot flash recovery_ab recovery-name.img
+fastboot reboot recovery
+
+Flash OS2.0.1.0 firmware - If already on this fw skip this step.
+
+1. Install rom, format data and reboot.
+Setup the rom.
+
+Touch menu items during setup seems to be slow - you'll need patience but it does work eventually.  During the rom everything is fine. 
