@@ -1,39 +1,138 @@
-11/01/25 YAAP Build
-Source:  Upstreamed to android-15.0.0_r10
-Misc performance fixes
-Credits to the YAAP Devs.
- 
- Device tree:
-448893f73 Revert "marble: overlay: Wifi: Update targepackage to Google APEX"
-2c1b6fe65 marble: Adjust override prop key names
-86290dfd9 marble: Build libvndfwk_detect_jni.qti_vendor
-3a95a52a5 marble: rootdir: Drop audio and sensor HAL override
-c3c19ac94 marble: Switch to xiaomi AIDL MultiHal sensors service
-28ad3ed4b marble: Add input uhid group to xiaomi MultiHal sensor
-8af7ca8ab marble: Kill log spam in logcat from SensorService
-eb7c85681 marble: Add xiaomi sensors HAL to hals.conf
-386919cc3 marble: Build Xiaomi sensor module
-50bfd33a1 marble: sensors: Move to new xiaomi-touch
-794ad946a marble: Add nonui notifier
-edafd19c7 marble: Don't build sensors.xiaomi HAL and move notifiers to root subdir
-a6fb03b49 marble: sensors: Drop unused notifiers
-3d3fb1c10 marble: Directly bind raw light notifier to SensorNotifier
-443857d42 marble: Nuke ATFWD
-90540ae4f marble: Move to double tap sensor
-1f13e0820 marble: Enable single_tap sensor and set permissions for touch sensors
+04/01/2026
+YAAP 16 QPR2 - Marble (POCO F5 / Redmi Note 12 Turbo)
+Android 16 Custom ROM Changelog
+Build Date: January 2026
+Android Version: 16.0 QPR2 - android-16.0.0_r4
+Device: marble (POCO F5 / Redmi Note 12 Turbo)
+By: macka69
 
-hardware/xiaomi
-c28b042 hidl: sensors: 2.1: Add additional pick-up sensor name
-86db057 aidl: sensors: Standardize xiaomi pickup sensor
-c010a04 aidl: sensors: Avoid target name conflicts
-6bc8fee aidl: sensors: Change default applicable license to Android-Apache-2.0
-76e3564 aidl: sensors: Import 2.X sensors hal proxy
-9b4767d aidl: sensors: Import aidl sensors MultiHal
+ROM Source Changes (YAAP)
+Framework & System
 
-Package/apps/Settings
-cc3e8f4299c Settings: Introduce new refresh rate selector page
+Merged latest Android 16 QPR2 AOSP sources
+Updated to January 2026 Android security patches
+Enhanced system stability and performance optimizations
+Improved memory management framework
+Updated build tools (Clang, kotlinc)
+SELinux enforcing mode maintained
 
-hardware/qcom-caf/sm8450/display
-10d1a1a51 gralloc: Allow devices to opt-in for YCrCb camera video encode
-ab1636bd8 hwc_display: guard Dolby Vision support
-fb5595a79 hwc_display: Support dolby vision
+UI/UX Features
+
+Material You dynamic theming with improved color extraction
+Enhanced system animations and transitions
+Refined Quick Settings panel customization
+Dark mode improvements for OLED displays
+Per-app font scaling in accessibility settings
+
+Features
+
+OTA updater support for seamless updates
+Native screen recording with internal audio
+Privacy Dashboard with detailed permission tracking
+Smart Charging implementation
+Gesture navigation improvements with adjustable sensitivity
+
+Performance
+
+Optimized app launch times
+Improved RAM management for multitasking
+Enhanced GPU driver performance
+Reduced scrolling jank
+Better thermal management
+
+
+Device-Specific Changes (marble)
+Latest Updates (January 4, 2026)
+UI/UX Improvements
+
+Switched to SwitchPreferenceCompat for consistent Material Design
+Applied Expressive M3E theme to device settings
+Converted DeviceSettings for M3E support with modern Material Design 3
+Refactored device parts for cleaner code architecture
+Enabled blur effects for enhanced visual experience
+Deferred divider application in thermal settings for better performance
+
+Performance & Optimization
+
+IRQ balancing optimizations
+
+Disabled IRQ balancing for msm_drm and kgsl_3d0 for better graphics performance
+
+
+Override dexopt flags for faster app compilation
+Configured dexopt optimization with speed-profile strategy
+Enabled QTI Memory Optimization for improved RAM management
+Disabled Zygote GL preload to reduce boot memory usage
+Battery backup improvements via optimized system properties
+
+Display & Media
+
+Dolby Vision support enabled in hwcomposer
+HDR types override for proper Dolby Vision functionality
+Updated HDR types API for Android 16 compatibility
+Set Netflix BSP revision for proper HD/HDR streaming
+Pinned libops.so from davinci for display optimization
+
+Audio Enhancements
+
+Included Sony Dolby Atmos for enhanced audio experience
+Synced audio configs with Spatial Audio
+Using QCOM implementation for audio effects
+Dolby Atmos missing config included
+
+Camera
+
+MiuiCamera support if available in vendor
+Camera postproc sepolicy moved to separate file for modularity
+Dropped unused Aperture camera configurations
+
+Device Parts & Features
+
+Complete parts refactor with modern architecture
+Display Saturation Service introduced with TileUtils
+Thermal profiles added
+
+Navigation profile for better location services
+Video profile for optimized media playback
+
+
+Parts services start early on boot for immediate availability
+Permissions and whitelist properly configured
+BootCompletedReceiver refactored for efficiency
+Dolby Vision support via HDR types override
+Help dialog fragment removed from doze (simplified UI)
+
+System Improvements
+
+Migrated SaturationUtils to Kotlin for modern codebase
+Non-NFC SKU manifest moved to ODM for proper device detection
+FRP (Factory Reset Protection) disabled for unlocked bootloader flexibility
+
+
+Kernel Changes (fiqri19102002)
+Kernel Base
+
+Linux kernel 5.10.247
+Based on POCO F5 / Redmi Note 12 Turbo (marble/marblein) sources
+Qualcomm SM8450 platform optimizations
+
+Performance
+
+Upstream kernel patches for stability
+Enhanced CPU scheduler
+Improved I/O performance
+Better power management
+Thermal optimizations
+
+
+SEPolicy Updates
+
+Initial sepolicy imported for Xiaomi parts
+Camera postproc attributes separated
+Parts services properly labeled
+Enhanced security context for device-specific services
+Enforcing mode maintained with proper denials addressed
+
+
+
+
